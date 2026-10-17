@@ -1,0 +1,29 @@
+{
+  "name": "ai-sdk-ollama-mcp-events",
+  "version": "0.1.0",
+  "dependencies": {
+    "@ai-sdk/mcp": "2.0.78",
+    "ai": "7.0.143",
+    "ai-sdk-ollama": "4.5.1",
+    "skybridge": "0.0.0-next.a297d2a",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@skybridge/devtools": "2.0.4",
+    "@types/node": "26.6.5",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.4"
+  },
+  "description": "MCP events end to end: a Skybridge server publishes comment.created, an AI SDK client subscribes, verifies the webhook and summarizes it with Ollama.",
+  "scripts": {
+    "server": "tsx src/server.ts",
+    "client": "tsx src/client.ts",
+    "check": "tsc --noEmit"
+  },
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.23.1"
+  }
+}
